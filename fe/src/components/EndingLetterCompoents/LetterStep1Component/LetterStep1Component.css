@@ -1,0 +1,79 @@
+@charset "UTF-8";
+/* rem unit */
+/* red-tokens */
+/* sky-blue-tokens */
+/* blue-tokens */
+/* gray-blue-tokens */
+/* green-tokens */
+/* apricot-tokens */
+/* yellow-tokens */
+/* mono-tokens */
+/* black & white tokens */
+/* general css 속성 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 스크롤바 숨기는 속성 */
+.hide-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.letter-step1-component {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  position: relative;
+  width: 100%;
+  height: max-content;
+  background: rgba(211, 239, 255, 0.7);
+  border-radius: 1rem;
+  /* flower-container */
+}
+.letter-step1-component .end-result-text-container {
+  /* end-result-text-container */
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+  width: 100%;
+  flex-grow: 1;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.letter-step1-component .end-result-text-container p {
+  text-align: center;
+}
+.letter-step1-component .flower-container {
+  width: 18.5rem;
+  height: max-content;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.letter-step1-component .flower-container img {
+  width: 61px;
+  height: 206px;
+}
+
+/*# sourceMappingURL=LetterStep1Component.css.map */

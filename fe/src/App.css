@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "surround-air";
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 100%;
+}
+
+a {
+  color: #141414;
+  text-decoration: none;
+}
+
+@font-face { /* 환경체  */
+  font-family: "echo";
+  src: url("./assets/font/echo-font.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face { /* 문화체 */
+  font-family: "culture";
+  src: url("./assets/font/cultrue-font.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face { /* 카페24 써라운드 에어체 */
+  font-family: "surround-air";
+  src: url("./assets/font/Cafe24SsurroundAir.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face { /* 카페24 써라운드체 */
+  font-family: "surround";
+  src: url("./assets/font/Cafe24Ssurround.ttf") format("truetype");
+  font-weight: normal;
+}

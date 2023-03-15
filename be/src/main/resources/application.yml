@@ -1,0 +1,104 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+spring:
+  cache:
+    type: redis
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDB103Dialect
+        show_sql: false
+        format_sql: true
+        use_sql_comments: true
+  mustache:
+    servlet:
+      cache: false
+  mvc:
+    path-match:
+      matching-strategy: ant_path_matcher
+  jwt:
+    key: seeeeeeeeeeeecret-keeeeeeeeeeeeeeeeeeeeeey
+    expire:
+      atk: 180000
+      rtk: 1800000
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: *******************
+    password: ****************
+    description: Flos 운영팀
+    properties:
+      transport:
+        protocol: smtp
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+        ssl:
+          trust: smtp.gmail.com
+          protocols: TLSv1.2
+    default-encoding: UTF-8
+    expire:
+      verification: 300000
+      approved: 1800000
+    reportfrom: ********************
+  security:
+    oauth2:
+      client:
+        registration:
+          naver:
+            clientId: '*********************'
+            clientSecret: '**********'
+            clientAuthenticationMethod: post
+            authorizationGrantType: authorization_code
+            scope:
+              - nickname
+              - email
+              - profile_image
+            clientName: Naver
+          kakao:
+            clientId: '********************************'
+            clientSecret: '********************************'
+            clientAuthenticationMethod: post
+            authorizationGrantType: authorization_code
+            scope:
+              - profile_nickname
+              - profile_image
+              - account_email
+            clientName: Kakao
+        provider:
+          naver:
+            authorizationUri: https://nid.naver.com/oauth2.0/authorize
+            tokenUri: https://nid.naver.com/oauth2.0/token
+            userInfoUri: https://openapi.naver.com/v1/nid/me
+            userNameAttribute: response
+          kakao:
+            authorizationUri: https://kauth.kakao.com/oauth/authorize
+            tokenUri: https://kauth.kakao.com/oauth/token
+            userInfoUri: https://kapi.kakao.com/v2/user/me
+            userNameAttribute: id
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  paging:
+    size: 10
+
+file:
+  extension-regex: \.(?i)(jpg|png|bmp|gif)
+
+sentiment:
+  url: 'https://naveropenapi.apigw.ntruss.com/sentiment-analysis/v1/analyze'
+  client-id: '**********'
+  client-secret: '****************************************'
+
+
+
+---
+
+spring:
+  profiles:
+    active: server

@@ -1,0 +1,8 @@
+version: "3"
+services:
+  nginxapp:
+    build: ./fe
+    container_name: front-end
+  springapp:
+    build: ./be
+    container_name: back-end

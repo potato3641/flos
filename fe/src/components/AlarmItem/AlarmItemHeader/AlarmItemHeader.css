@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* rem unit */
+/* red-tokens */
+/* sky-blue-tokens */
+/* blue-tokens */
+/* gray-blue-tokens */
+/* green-tokens */
+/* apricot-tokens */
+/* yellow-tokens */
+/* mono-tokens */
+/* black & white tokens */
+/* general css 속성 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 스크롤바 숨기는 속성 */
+.hide-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+.alram-div {
+  width: 100%;
+}
+.alram-div .alarm-header-div {
+  width: 100%;
+  height: 3.75rem;
+  display: flex;
+  flex-flow: row;
+  gap: 0.5rem;
+}
+.alram-div .alarm-header-div img {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 1.125rem;
+}
+.alram-div .alarm-header-div .alarm-text-div {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.25rem 0px;
+  gap: 0.25rem;
+  flex-grow: 1;
+  height: 3.75rem;
+}
+.alram-div .alarm-header-div .alarm-text-div .alarm-text {
+  width: 95%;
+  height: 2.125rem;
+  font-size: 0.875rem;
+  text-overflow: wrap;
+}
+.alram-div .alarm-header-div .alarm-text-div .alarm-time-log {
+  width: max-content;
+  height: 0.8125rem;
+  font-size: 0.625rem;
+}
+
+/*# sourceMappingURL=AlarmItemHeader.css.map */
